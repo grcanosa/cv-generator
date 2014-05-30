@@ -1,20 +1,48 @@
 #!/bin/bash
 echo Generating CVs
 
-cp de-macro/de-macro ./de-macro-script.py
+mkdir temporal
+cp base_CV_GRC.tex temporal/
+cp de-macro-script-2.py temporal/
+cp gonzalo.jpg temporal/gonzalo.jpg
+cd info
+./parser
+cd ..
+cp info/ENG_info-private.sty temporal/
+cp info/GER_info-private.sty temporal/
+cp info/SPA_info-private.sty temporal/
+cd temporal
 for LAN in ENG GER SPA
 do
-echo "Generating CV in $LAN"
-echo "%New Latex Temporal File" > CV_GRC_${LAN}.tex
-cat ./languages/$LAN.lan >> CV_GRC_${LAN}.tex
+echo "%CV in ${LAN}" > CV_GRC_${LAN}.tex
+cp ${LAN}_info-private.sty CV_info-private.sty
 cat base_CV_GRC.tex >> CV_GRC_${LAN}.tex
-echo "Executing de macro"
+echo "Execute macro"
+python -O de-macro-script-2.py CV_GRC_${LAN}
+pdflatex -interaction=batchmode "\input{CV_GRC_${LAN}-clean.tex}"
+pdflatex -interaction=batchmode "\input{CV_GRC_${LAN}-clean.tex}"
+cp CV_GRC_${LAN}-clean.tex ../CV_GRC_${LAN}.tex
+cp CV_GRC_${LAN}-clean.pdf ../CV_GRC_${LAN}.pdf
+done
+cd ..
+rm -rf temporal
+
+
+
+#cp de-macro/de-macro ./de-macro-script.py
+#for LAN in ENG GER SPA
+#do
+#echo "Generating CV in $LAN"
+#echo "%New Latex Temporal File" > CV_GRC_${LAN}.tex
+#cat ./languages/$LAN.lan >> CV_GRC_${LAN}.tex
+#cat base_CV_GRC.tex >> CV_GRC_${LAN}.tex
+#echo "Executing de macro"
 #python -O de-macro-script.py CV_GRC_${LAN}_temp
-pdflatex -interaction=batchmode CV_GRC_${LAN}.tex
+#pdflatex -interaction=batchmode CV_GRC_${LAN}.tex
 #pdflatex -interaction=batchmode "\def\gonzalocvlanguage{$LAN}\input{CV_GRC_$LAN.tex}"
 #rm CV_GRC_${LAN}.tex
-rm CV_GRC_${LAN}.out
-rm CV_GRC_${LAN}.log
-rm CV_GRC_${LAN}.aux
+#rm CV_GRC_${LAN}.out
+#rm CV_GRC_${LAN}.log
+#rm CV_GRC_${LAN}.aux
 
-done
+#done

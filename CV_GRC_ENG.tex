@@ -1,11 +1,4 @@
-%New Latex Temporal File
-\newif\ifenglish
-\newif\ifgerman
-\newif\ifspanish
-
-\englishtrue
-\germanfalse
-\spanishfalse
+%CV in ENG
 %% start of file `template.tex'.
 %% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
 %
@@ -37,27 +30,16 @@ right  = 3.00cm]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 \setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
-\usepackage{info/CV_info_personal-private}
-\usepackage{info/CV_info_working-private}
-\usepackage{info/CV_info_education-private}
-\usepackage{info/CV_info_languages-private}
-\usepackage{info/CV_info_skills-private}
-\usepackage{info/CV_info_research-private}
-
-
-
-
-
 
 
 
 
 % personal data
-\firstname{\Huge \GONCVfirstname}
-\familyname{\\ \huge \GONCVfamilyname}
+\firstname{\Huge Rodr\'iguez Canosa,}
+\familyname{\\ \huge Gonzalo Ruy}
 %\name{Gonzalo}{Rodr\'iguez Canosa}
-\title{\GONCVtitle}               % optional, remove the line if not wanted
-\extrainfo{\GONCVextrainfo} 
+\title{PhD in Robotics}               % optional, remove the line if not wanted
+\extrainfo{Date of birth: 07-12-1984} 
 %\address{Madrid (SPAIN)}{}    % optional, remove the line if not wanted
 \address{C/Agustín Durán 30, 1ºIZQ}{28028 Madrid (SPAIN)}    % optional, remove the line if not wanted
 \phone[mobile]{+34 617599017}                    % optional, remove the line if not wanted
@@ -106,39 +88,39 @@ right  = 3.00cm]{geometry}
 %\definecolor{color1}{rgb}{0.2,0.2,0.2}% Testcolor
 \definecolor{color2}{rgb}{0.35,0.35,0.35}% dark grey
 
-\quote{\GONCVquote}   
+\quote{Doctor Engineer with great experience in hw+sw projects development. 5 year of experience.}   
 
 \begin{document}
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
-\section{\GONCVsecPROFESIONALEXPERIENCE}
+\section{Profesional Experience PP}
 \GONCVsecPROFESIONALEXPERIENCEeng
-\subsection{\GONCVsecPROFESIONALEXPERIENCEworking}
-\GONCVworkingEPROSIMA
-\GONCVworkingUPM
-\GONCVworkingUOA
-\GONCVworkingBOMBARDIER
+\subsection{Working}
+\cventry{Feb 2014 \\present}{Senior development engineer}{eProsima}{Madrid}{Spain}{Real Time Publisher Subscriber (RTPS) implementation (DDS standard by the OMG) focused on performance and security.}
+\cventry{Feb 2009 \\Nov 2013}{PhD researcher}{Robotic and Cybernetic Group}{Madrid}{Spain}{MultiRobot Systems for security and surveillance in Critical Infrastructures.}
+\cventry{Sep 2011 \\Dec 2011}{Visiting researcher}{Robotics Research Group (UoA)}{Auckland}{New Zealand}{Dynamic object detection system from UAV based on optical flows differences, supervised by Dr. Bruce MacDonald}
+\cventry{May 2008 \\Aug 2008}{Trainee Engineer}{Flight Science Dept. at Bombardier}{Montreal}{Canada}{User interface to optimize the documentation process of the simulation and testing reports.}
               % arguments 3 to 6 are optional
-\subsection{\GONCVsecPROFESIONALEXPERIENCEscholarships}
-\GONCVbecasTRANSPORTES
-\GONCVbecasAUTOMATICA
+\subsection{Scholarships and Grants}
+\cventry{Feb 2008 \\Apr 2008}{Research scholarship}{Transportation Engineer Dept.}{University of Seville}{Spain}{Study of the CANBUS devices, protocols and data in different automobiles.}
+\cventry{Nov 2007 \\Jan 2008}{Final Degree Project}{Automatic and Systems Engineering Dept.}{Seville}{Spain}{User interface to define transportation and storage problems was created, along with a centralized control system to obtain the optimum solution.}
 
-\section{\GONCVsecEDU}
-\GONCVeduPHD
-\GONCVeduMSC
-\GONCVeduERASMUS
-\GONCVeduUS
-\GONCVeduINSTI
-\GONCVeduCOLEGIO
+\section{Education}
+\cventry{2009-2013}{PhD in Robotics and Automatics}{4 years}{Technical University of Madrid}{Spain}{}
+\cventry{2008-2010}{MSc in Automatics and Robotics}{2 years}{Technical University of Madrid}{Spain}{}
+\cventry{2006-2007}{Erasmus Student in Royal Institute of Technology}{1 year}{Stockholm}{Sweden}{}
+\cventry{2002-2008}{MsC in Systems and Automatics Engineering \newline BSc in Industrial Engineering}{5 years}{University of Seville}{Spain}{}
+\cventry{2000-2002}{Secondary Education in High-School Martinez Montañés}{Seville}{Spain}{}{International Baccalaureate Organization Diploma - IBO.}
+\cventry{1988-2000}{Primary Education in German School Albrecht Dürer}{Seville}{Spain}{}{}
 
 
 
-\section{\GONCVsecLANGUAGES}
-\GONCVlanSPA
-\GONCVlanENG
-\GONCVlanGER
+\section{Languages}
+\cvlanguage{Spanisch}{Native language}{}
+\cvlanguage{Englisch}{Full proffesional competence}{High written and spoken level.}
+\cvlanguage{German}{Basic proffesional competence}{`Zentrale MittelstuffePrüfung` of the Goethe Institut (C1).}
 
 \newpage
 % \section{Computer skills}
@@ -149,14 +131,14 @@ right  = 3.00cm]{geometry}
 % \cvline{Robotics}{Robot Operating System (ROS), 3D Vision, OpenCV, PCL (Point Cloud Library), OpenGL.}
 % %\cvline{Engeeniering}{Advanced Matlab Programming, SolidEdge 3D, AutoCAD 2D-3D.}
 
-\section{\GONCVsecSKILLS}
-\subsection{\GONCVsecCOMPUTER}
+\section{Technical capabilities}
+\subsection{Computer Skills}
 \cvline{SO}{Linux and Windows.}
 \cvline{Office Suite}{MS Word, Excel, PowerPoint, LaTeX.}
 \cvline{C++}{Large experience in different projects with multiple libraries (Boost, OpenCV, ...). Experience with performance improvements techniques and profilers tools.}
 \cvline{Programming}{Beginner level of C\#, Python, Django, HTML, Java, Android SDK, OpenGL.}
 \cvline{Development}{CMake, Git, SVN, Eclipse, Microsoft Visual Studio, ...}
-\subsection{\GONCVsecINGENIERIA}
+\subsection{Engineering Processes}
 \cvline{Simulation}{Webots, Player-Gazebo, Simulink.}
 \cvline{Matlab}{Fast prototyping of algorithms. Graphical Interfaces.}
 \cvline{Robotics}{Mobile and aerial robotics (UGV y UAV), Robot Operating System (ROS).}
@@ -164,18 +146,18 @@ right  = 3.00cm]{geometry}
 \cvline{Hardware}{Experience in sensor and actuator control. Data adquisition platforms and mechanisms design. Experience with LIDAR sensors and 3D cameras.}
 
 
-\section{\GONCVsecPROJECTS}
+\section{Research Projects}
 \cvline{2011 - 2013}{ROTOS national project. Multirobot Systems for protection of large critical infraestructures. Ref: DPI2010-17998 of DPI subprogram}
 \cvline{2009 - 2010}{Networked Multi-Robot Systems (NMRS) project by the European Defense Agency. B-0004-ESM2\_ERG.}
 
- \section{\GONCVsecPUBLICATIONS}
+ \section{Publications}
  \cvline{$\bullet$}{ G. Rodríguez-Canosa, A. Barrientos y J. Cerro \textit{Detection and Tracking of Dynamic
 Objects by Using a Multirobot System: Application to Critical Infrastructures Surveillance} Sensors. vol.14 -2 pags. 2911 - 2943. 2014.}
  \cvline{$\bullet$}{D. Sanz, G. Rodríguez-Canosa, J. Barrientos, J. Cerro, J. Hernandez, A. Barrientos. \textit{Sensorized robotic sphere for large exterior critical infrastructures supervision} Journal of Applied Remote Sensing vol.7 pags. 1-19 (F.I. .876) 2013. JCR: 1.953}
 \cvline{$\bullet$}{Gonzalo R. Rodríguez-Canosa, Stephen Thomas, Jaime del Cerro, Antonio Barrientos and Bruce MacDonald.\textit{A Real-Time Method to Detect and Track Moving Objects (DATMO) from Unmanned Aerial Vehicles (UAVs) Using a Single Camera}. Remote Sensensing. 2012, 4(4), 1090-1111; doi:10.3390/rs4041090. JCR: 2.171}
 % \cvline{$\bullet$}{Gonzalo R. Rodríguez-Canosa, J.Del Cerro and A. Barrientos. \textit{Detección e Identificación de Objetos Móviles en Sistemas Multi-Robot con Información 3D}. 8th Workshop of Robocity 2030-II on Exterior Robots. Madrid, November 2010.}
 
-\section{\GONCVsecTESIS}
+\section{PhD thesis}
 \cvline{Title}{Detection and Tracking of Dynamic Objects. A MultiRobot Approach to Critical Infrastructures Surveillance.}
 \cvline{Supervisors}{Jaime del Cerro and Antonio Barrientos.}
 \cvline{Description}{My thesis was  focused in MultiRobot Systems for security and surveillance of Exterior Critical Infrastructures (CI). I have developed detection of dynamic objects algorithms for both aerial and ground robots. A Point Cloud based robot localization system has also been developed. Main skills and tools used in this thesis include but are not limited to: Mobile robotics, Simulation, Webots, ROS, PCL, OpenCV. \mbox{Download: \href{https://www.dropbox.com/s/tn7ooep4quv1nvl/PhD.GonzaloRCanosa.HR.4oct.pdf}{\textit{\textcolor{color1}{thesis.pdf}}}}}
