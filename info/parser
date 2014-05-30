@@ -10,7 +10,7 @@ echo "DUMP" > "DUMP_info-private.sty"
 output="DUMP"
 for NAME in personal working education languages skills research
 do
-	FILENAME="CV_info_${NAME}-private.sty"
+	FILENAME="CV_info_${NAME}-private.tex"
 	exec 0<$FILENAME
 	while read -r line
 	do
