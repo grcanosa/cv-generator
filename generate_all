@@ -1,0 +1,15 @@
+#!/bin/bash
+echo Generating CVs
+
+
+for LAN in ENG GER SPA
+do
+echo "Generating CV in $LAN"
+cp base_CV_GRC.tex CV_GRC_$LAN.tex
+pdflatex -interaction=batchmode "\def\gonzalocvlanguage{$LAN}\input{CV_GRC_$LAN.tex}"
+pdflatex -interaction=batchmode "\def\gonzalocvlanguage{$LAN}\input{CV_GRC_$LAN.tex}"
+rm CV_GRC_$LAN.tex
+rm CV_GRC_$LAN.out
+rm CV_GRC_$LAN.log
+rm CV_GRC_$LAN.aux
+done
