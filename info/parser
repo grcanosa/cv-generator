@@ -1,0 +1,32 @@
+#!/bin/bash
+
+
+
+
+echo "%INFO FILE in ENLGISH "> "ENG_info-private.sty"
+echo "%INFO FILE in GERMAN "> "GER_info-private.sty"
+echo "%INFO FILE in SPANISH "> "SPA_info-private.sty"
+echo "DUMP" > "DUMP_info-private.sty"
+output="DUMP"
+for NAME in personal working education languages skills research
+do
+	FILENAME="CV_info_${NAME}-private.sty"
+	exec 0<$FILENAME
+	while read -r line
+	do
+		#echo "Line $NAME $line"
+		if [ "$line" == "\ifenglish" ]
+		then
+			output="ENG"
+		elif [ "$line" == "\ifgerman" ]
+		then
+			output="GER"
+		elif [ "$line" == "\ifspanish" ]; then
+			output="SPA"
+		elif [ "$line" == "\fi" ];then
+			output="DUMP"
+		else
+			echo $line >> "${output}_info-private.sty"
+		fi
+	done
+done

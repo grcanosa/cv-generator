@@ -1,3 +1,7 @@
+\newif\ifenglish
+\newif\ifgerman
+\newif\ifspanish
+
 \spanishtrue
 \englishfalse
 \germanfalse
