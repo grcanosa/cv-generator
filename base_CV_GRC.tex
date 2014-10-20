@@ -45,7 +45,7 @@ right  = 3.00cm]{geometry}
 %\phone{+34 913363010}                      % optional, remove the line if not wanted
 %\fax{fax (optional)}                          % optional, remove the line if not wanted
 \email{grcanosa@gmail.com}                      % optional, remove the line if not wanted
-\social[linkedin]{grcanosa} 
+%\social[linkedin]{grcanosa} 
 %\homepage{http://es.linkedin.com/in/grcanosa/en}
 \photo[64pt][0pt]{gonzalo.jpg}  
 
@@ -89,13 +89,22 @@ right  = 3.00cm]{geometry}
 
 \quote{\GONCVquote}   
 
+
+\usepackage{etoolbox}
+\patchcmd{\recomputecvlengths}{%
+  \setlength{\quotewidth}{0.65\textwidth}%
+}{%
+  \setlength{\quotewidth}{0.8\textwidth}%
+}{}{}
+
+
+
 \begin{document}
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
 \section{\GONCVsecPROFESIONALEXPERIENCE}
-\GONCVsecPROFESIONALEXPERIENCEeng
 \subsection{\GONCVsecPROFESIONALEXPERIENCEworking}
 \GONCVworkingEPROSIMA
 \GONCVworkingUPM
@@ -130,6 +139,8 @@ right  = 3.00cm]{geometry}
 % \cvline{Robotics}{Robot Operating System (ROS), 3D Vision, OpenCV, PCL (Point Cloud Library), OpenGL.}
 % %\cvline{Engeeniering}{Advanced Matlab Programming, SolidEdge 3D, AutoCAD 2D-3D.}
 
+\begin{small}
+
 \section{\GONCVsecSKILLS}
 \subsection{\GONCVsecCOMPUTER}
 \GONCVskillSO
@@ -153,6 +164,7 @@ right  = 3.00cm]{geometry}
  \section{\GONCVsecPUBLICATIONS}
  \cvline{$\bullet$}{ G. Rodríguez-Canosa, A. Barrientos y J. Cerro \textit{Detection and Tracking of Dynamic
 Objects by Using a Multirobot System: Application to Critical Infrastructures Surveillance} Sensors. vol.14 -2 pags. 2911 - 2943. 2014.}
+\cvline{$\bullet$}{G. Rodríguez Canosa. \textit{Caracterizaci\'on de Infraestructuras Críticas y su influencia sobre sistemas de seguridad robt\'oticos.} Marzo 2013. \url{http://oa.upm.es/10410/4/CaracteristicasICE_marzo_2013.pdf}}
  \cvline{$\bullet$}{D. Sanz, G. Rodríguez-Canosa, J. Barrientos, J. Cerro, J. Hernandez, A. Barrientos. \textit{Sensorized robotic sphere for large exterior critical infrastructures supervision} Journal of Applied Remote Sensing vol.7 pags. 1-19 (F.I. .876) 2013. JCR: 1.953}
 \cvline{$\bullet$}{Gonzalo R. Rodríguez-Canosa, Stephen Thomas, Jaime del Cerro, Antonio Barrientos and Bruce MacDonald.\textit{A Real-Time Method to Detect and Track Moving Objects (DATMO) from Unmanned Aerial Vehicles (UAVs) Using a Single Camera}. Remote Sensensing. 2012, 4(4), 1090-1111; doi:10.3390/rs4041090. JCR: 2.171}
 % \cvline{$\bullet$}{Gonzalo R. Rodríguez-Canosa, J.Del Cerro and A. Barrientos. \textit{Detección e Identificación de Objetos Móviles en Sistemas Multi-Robot con Información 3D}. 8th Workshop of Robocity 2030-II on Exterior Robots. Madrid, November 2010.}
@@ -160,6 +172,8 @@ Objects by Using a Multirobot System: Application to Critical Infrastructures Su
 \section{\GONCVsecTESIS}
 \GONCVtesisINFO
 \GONCVtesisDESCRIPTION
+
+\end{small}
 
 % \section{Extra Curricular Activities}
 % \cvline{July 2012}{Cooperation of Robots and Sensor Networks. GKmM Summer School 2012.\newline \url{http://www.gkmm.tu-darmstadt.de/summerschool/?q=node/1}}

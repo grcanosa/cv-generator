@@ -39,14 +39,14 @@ right  = 3.00cm]{geometry}
 \familyname{\\ \huge Gonzalo Ruy}
 %\name{Gonzalo}{Rodr\'iguez Canosa}
 \title{PhD in Robotik}               % optional, remove the line if not wanted
-\extrainfo{Geburtsdatum: 07-12-1984} 
+\extrainfo{\linkedinsocialsymbol \href{https://www.linkedin.com/in/grcanosa}{grcanosa} \githubsocialsymbol \href{https://github.com/grcanosa}{grcanosa} \\Geburtsdatum: 07-Dez-1984.} 
 %\address{Madrid (SPAIN)}{}    % optional, remove the line if not wanted
 \address{C/Agustín Durán 30, 1ºIZQ}{28028 Madrid (SPAIN)}    % optional, remove the line if not wanted
 \phone[mobile]{+34 617599017}                    % optional, remove the line if not wanted
 %\phone{+34 913363010}                      % optional, remove the line if not wanted
 %\fax{fax (optional)}                          % optional, remove the line if not wanted
 \email{grcanosa@gmail.com}                      % optional, remove the line if not wanted
-\social[linkedin]{grcanosa} 
+%\social[linkedin]{grcanosa} 
 %\homepage{http://es.linkedin.com/in/grcanosa/en}
 \photo[64pt][0pt]{gonzalo.jpg}  
 
@@ -88,7 +88,17 @@ right  = 3.00cm]{geometry}
 %\definecolor{color1}{rgb}{0.2,0.2,0.2}% Testcolor
 \definecolor{color2}{rgb}{0.35,0.35,0.35}% dark grey
 
-\quote{Doktor-Ingenieur mit großer Erfahrung in hw + sw Entwicklungsprojekte. 5 Jahre Erfahrung.}   
+\quote{Doktor-Ingenieur, 6 Jahre Erfahrung in hw + sw Entwicklungsprojekte.\\ Große Programmierkenntnisse.}   
+
+
+\usepackage{etoolbox}
+\patchcmd{\recomputecvlengths}{%
+  \setlength{\quotewidth}{0.65\textwidth}%
+}{%
+  \setlength{\quotewidth}{0.8\textwidth}%
+}{}{}
+
+
 
 \begin{document}
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
@@ -96,7 +106,6 @@ right  = 3.00cm]{geometry}
 \makecvtitle
 
 \section{XX}
-\GONCVsecPROFESIONALEXPERIENCEeng
 \subsection{XX}
 eProsima
 PHD
@@ -131,13 +140,15 @@ Colegio
 % \cvline{Robotics}{Robot Operating System (ROS), 3D Vision, OpenCV, PCL (Point Cloud Library), OpenGL.}
 % %\cvline{Engeeniering}{Advanced Matlab Programming, SolidEdge 3D, AutoCAD 2D-3D.}
 
+\begin{small}
+
 \section{XX}
 \subsection{XX}
 \cvline{SO}{Linux and Windows.}
 \cvline{Office Suite}{MS Word, Excel, PowerPoint, LaTeX.}
 \cvline{C++}{Large experience in different projects with multiple libraries (Boost, OpenCV, ...). Experience with performance improvements techniques and profilers tools.}
 \cvline{Programming}{Beginner level of C\#, Python, Django, HTML, Java, Android SDK, OpenGL.}
-\cvline{Development}{CMake, Git, SVN, Eclipse, Microsoft Visual Studio, ...}
+\cvline{Development}{CMake, Makefile, Git, SVN, Eclipse, Microsoft Visual Studio 2010, GDB debugger, Valgrind.}
 
 \subsection{XX}
 \cvline{Simulation}{Webots, Player-Gazebo, Simulink.}
@@ -147,13 +158,14 @@ Colegio
 \cvline{Hardware}{Experience in sensor and actuator control. Data adquisition platforms and mechanisms design. Experience with LIDAR sensors and 3D cameras.}
 
 
-\section{Forschungsprojekte}
+\section{Projekte}
 \cvline{2011 - 2013}{ROTOS national project. Multirobot Systems for protection of large critical infraestructures. Ref: DPI2010-17998 of DPI subprogram}
 \cvline{2009 - 2010}{Networked Multi-Robot Systems (NMRS) project by the European Defense Agency. B-0004-ESM2\_ERG.}
 
  \section{Publikationen}
  \cvline{$\bullet$}{ G. Rodríguez-Canosa, A. Barrientos y J. Cerro \textit{Detection and Tracking of Dynamic
 Objects by Using a Multirobot System: Application to Critical Infrastructures Surveillance} Sensors. vol.14 -2 pags. 2911 - 2943. 2014.}
+\cvline{$\bullet$}{G. Rodríguez Canosa. \textit{Caracterizaci\'on de Infraestructuras Críticas y su influencia sobre sistemas de seguridad robt\'oticos.} Marzo 2013. \url{http://oa.upm.es/10410/4/CaracteristicasICE_marzo_2013.pdf}}
  \cvline{$\bullet$}{D. Sanz, G. Rodríguez-Canosa, J. Barrientos, J. Cerro, J. Hernandez, A. Barrientos. \textit{Sensorized robotic sphere for large exterior critical infrastructures supervision} Journal of Applied Remote Sensing vol.7 pags. 1-19 (F.I. .876) 2013. JCR: 1.953}
 \cvline{$\bullet$}{Gonzalo R. Rodríguez-Canosa, Stephen Thomas, Jaime del Cerro, Antonio Barrientos and Bruce MacDonald.\textit{A Real-Time Method to Detect and Track Moving Objects (DATMO) from Unmanned Aerial Vehicles (UAVs) Using a Single Camera}. Remote Sensensing. 2012, 4(4), 1090-1111; doi:10.3390/rs4041090. JCR: 2.171}
 % \cvline{$\bullet$}{Gonzalo R. Rodríguez-Canosa, J.Del Cerro and A. Barrientos. \textit{Detección e Identificación de Objetos Móviles en Sistemas Multi-Robot con Información 3D}. 8th Workshop of Robocity 2030-II on Exterior Robots. Madrid, November 2010.}
@@ -166,6 +178,8 @@ Objects by Using a Multirobot System: Application to Critical Infrastructures Su
 
 \cvline{Description}{XXXXXXXXX \mbox{Download: \href{https://www.dropbox.com/s/tn7ooep4quv1nvl/PhD.GonzaloRCanosa.HR.4oct.pdf}{\textit{\textcolor{color1}{thesis.pdf}}}}}
 
+
+\end{small}
 
 % \section{Extra Curricular Activities}
 % \cvline{July 2012}{Cooperation of Robots and Sensor Networks. GKmM Summer School 2012.\newline \url{http://www.gkmm.tu-darmstadt.de/summerschool/?q=node/1}}

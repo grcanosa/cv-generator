@@ -13,7 +13,7 @@
 \newcommand{\GONCVsecPROJECTS}{XX}
 \fi
 \ifspanish
-\newcommand{\GONCVsecPROJECTS}{ XX}
+\newcommand{\GONCVsecPROJECTS}{Proyectos}
 \fi
 
 \ifenglish
@@ -23,7 +23,7 @@
 \newcommand{\GONCVsecPUBLICATIONS}{XX}
 \fi
 \ifspanish
-\newcommand{\GONCVsecPUBLICATIONS}{XX}
+\newcommand{\GONCVsecPUBLICATIONS}{Publicaciones}
 \fi
 
 \ifenglish
@@ -33,7 +33,7 @@
 \newcommand{\GONCVsecTESIS}{XX}
 \fi
 \ifspanish
-\newcommand{\GONCVsecTESIS}{XX}
+\newcommand{\GONCVsecTESIS}{Tésis Doctoral}
 \fi
 
 \ifenglish
