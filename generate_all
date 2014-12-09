@@ -16,9 +16,9 @@ for LAN in ENG GER SPA
 do
 echo "%CV in ${LAN}" > CV_GRC_${LAN}.tex
 cp ${LAN}_info-private.sty CV_info-private.sty
-cat base_CV_GRC.tex >> CV_GRC_${LAN}.tex
+cat base_CV_GRC.tex >> CV_GRC_${LAN}-clean.tex
 echo "Execute macro"
-python -O de-macro-script-2.py CV_GRC_${LAN}
+#python -O de-macro-script-2.py CV_GRC_${LAN}
 pdflatex -interaction=batchmode "\input{CV_GRC_${LAN}-clean.tex}"
 pdflatex -interaction=batchmode "\input{CV_GRC_${LAN}-clean.tex}"
 cp CV_GRC_${LAN}-clean.tex ../CV_GRC_${LAN}.tex

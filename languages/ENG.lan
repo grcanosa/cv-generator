@@ -1,7 +1,0 @@
-\newif\ifenglish
-\newif\ifgerman
-\newif\ifspanish
-
-\englishtrue
-\germanfalse
-\spanishfalse

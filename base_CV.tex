@@ -29,6 +29,8 @@ right  = 3.00cm]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 \setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
+\usepackage{wrapfig}
+
 \usepackage{CV_INFO}
 
 
@@ -91,13 +93,14 @@ right  = 3.00cm]{geometry}
 
 
 \usepackage{etoolbox}
+
 \patchcmd{\recomputecvlengths}{%
   \setlength{\quotewidth}{0.65\textwidth}%
 }{%
   \setlength{\quotewidth}{0.8\textwidth}%
 }{}{}
 
-
+\newtoggle{toggleEXPERTISESECTION}
 
 \begin{document}
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
@@ -174,6 +177,70 @@ Objects by Using a Multirobot System: Application to Critical Infrastructures Su
 \GONCVtesisDESCRIPTION
 
 \end{small}
+
+
+\GONCVuseEXPERTISESECTION
+
+\iftoggle{toggleEXPERTISESECTION}
+{
+
+\begin{small}
+
+\section{\GONCVsecPREVIOUSEXPERIENCE}
+
+\subsection{\GONCVpreviousRTPS}
+\GONCVpreviousRTPSdescription
+
+\subsection{\GONCVpreviousROTOS}
+\begin{wrapfigure}{l}{0.25\textwidth}
+\vspace{-0.3cm}
+\centering
+\includegraphics[width=0.24\textwidth]{svd_sac_ia_sac_better.png}
+\vspace{-0.3cm}
+\end{wrapfigure}
+\GONCVpreviousROTOSdescription
+
+\subsection{\GONCVpreviousUAVAUCKLAND}
+\begin{wrapfigure}{l}{0.25\textwidth}
+\vspace{-0.3cm}
+\centering
+\includegraphics[width=0.24\textwidth]{r1_realoptflow.png}
+\vspace{-0.3cm}
+\end{wrapfigure}
+\GONCVpreviousUAVAUCKLANDdescription
+
+
+\subsection{\GONCVpreviousUPMDATMO}
+\begin{wrapfigure}{l}{0.25\textwidth}
+\vspace{-0.3cm}
+\centering
+\includegraphics[width=0.24\textwidth]{pcpre_isolated_points.png}
+\vspace{0.2cm}
+\end{wrapfigure}
+\GONCVpreviousUPMDATMOdescription
+
+\subsection{\GONCVpreviousBOMBARDIER}
+\GONCVpreviousBOMBARDIERdescription
+
+\subsection{\GONCVpreviousCANBUS}
+\GONCVpreviousCANBUSdescription
+
+\subsection{\GONCVpreviousTRANSPORTES}
+\begin{wrapfigure}{l}{0.25\textwidth}
+\vspace{-0.3cm}
+\centering
+\includegraphics[width=0.24\textwidth]{redtopo.png}
+\vspace{-0.3cm}
+\end{wrapfigure}
+\GONCVpreviousTRANSPORTESdescription
+
+\end{small}
+}
+{
+}
+
+
+
 
 % \section{Extra Curricular Activities}
 % \cvline{July 2012}{Cooperation of Robots and Sensor Networks. GKmM Summer School 2012.\newline \url{http://www.gkmm.tu-darmstadt.de/summerschool/?q=node/1}}

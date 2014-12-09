@@ -20,10 +20,10 @@ if __name__ == "__main__":
 	name='GRC'
 	subprocess.call(['rm','-R','temporal'])
 	subprocess.call(['rm','-R','output'])
-	os.mkdir('temporal')
+	shutil.copytree('images','temporal')
+	#os.mkdir('temporal')
 	os.mkdir('output')
 	shutil.copy('base_CV.tex','temporal/base_CV.tex')
-	shutil.copy('personal_photo.jpg','temporal/personal_photo.jpg')
 	with open('CV_info.csv') as file:
 		info = csv.reader(file,delimiter=';')
 		files = []
@@ -33,8 +33,9 @@ if __name__ == "__main__":
 				languages=row[1:]
 				files=firstline(name,row)
 			else:
-				for idlan,lan in enumerate(languages):			
-					files[idlan].write('\\newcommand{\\'+row[0]+'}{'+row[1+idlan]+'}\n')
+				if row[0] != 'IGNORELINE':
+					for idlan,lan in enumerate(languages):			
+						files[idlan].write('\\newcommand{\\'+row[0]+'}{'+row[1+idlan]+'}\n')
 		os.chdir('temporal')
 		for idlan,lan in enumerate(languages):
 			files[idlan].close()
