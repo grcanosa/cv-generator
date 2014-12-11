@@ -31,7 +31,7 @@ GONCVsecINGENIERIA;Engineering Processes;Ingeniería;XX
 GONCVskillSO;\cvline{SO}{Linux and Windows.};\cvline{SO}{Linux and Windows.};XX
 GONCVskillOFFICE;\cvline{Office Suite}{MS Word, Excel, PowerPoint, LaTeX.};\cvline{Ofimática}{MS Word, Excel, PowerPoint, LaTeX.};XX
 GONCVskillCPP;\cvline{C++}{Large experience in different projects with multiple libraries (Boost, OpenCV, ...). Experience with performance improvements techniques and profilers tools.};\cvline{C++}{Gran experiencia en diversos proyectos con diferentes librerías (Boost, OpenCV, ...). Experiencia con técnicas de mejora de rendimiento y herramientas de profiler.};XX
-GONCVskillPROGRAM;\cvline{Programming}{User level of C\#, Python, Django, HTML, Java, Android SDK, OpenGL.};\cvline{Programación}{Nivel básico de C\#, Python, Django, HTML, Java, Android SDK, OpenGL.};XX
+GONCVskillPROGRAM;\cvline{Programming}{Great experience in Object-Oriented Programming, concurrency and multithreading experience. Intermediate level of Java, C\# and Python.};\cvline{Programación}{Amplia experiencia en programación orienta a aobjectos, experiencia en cocurrencia y multithreading. Nivel intermedio de Java, C\# y Python.};XX
 GONCVskillDEVELOP;\cvline{Development}{CMake, Makefile, Git, SVN, Eclipse, Microsoft Visual Studio 2010, GDB debugger, Valgrind.};\cvline{Desarrollo}{CMake, Makefile, Git, SVN, Eclipse, Microsoft Visual Studio 2010, GDB debugger, Valgrind.};XX
 GONCVingSIMU;\cvline{Simulation}{Webots, Player-Gazebo, Simulink.};\cvline{Simulación}{Webots, Player-Gazebo, Simulink.};XX
 GONCVingMATLAB;\cvline{Matlab}{Fast prototyping of algorithms. Graphical Interfaces.};\cvline{Matlab}{Prototipado rápido de algoritmos. Generación de interfaces gráficas.};XX
