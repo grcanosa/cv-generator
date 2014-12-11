@@ -46,6 +46,7 @@ if __name__ == "__main__":
 			os.rename(infoname,'CV_INFO.sty')
 			shutil.copy('base_CV.tex',cvlanname)
 			shutil.copy(cvlanname,'../output/'+cvlanname)
+			os.environ['TEXINPUTS'] = '.:../moderncv//:'
 			subprocess.call(['pdflatex','-interaction=batchmode','\\input{'+cvlanname+'}'])
 			subprocess.call(['pdflatex','-interaction=batchmode','\\input{'+cvlanname+'}'])
 			shutil.copy(pdfname,'../output/'+pdfname)

@@ -20,10 +20,7 @@
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[top    = 2.75cm,
-bottom = 2.50cm,
-left   = 2.50cm,
-right  = 3.00cm]{geometry}
+\usepackage[top    = 2.75cm,bottom = 2.50cm,left   = 2.50cm,right  = 3.00cm]{geometry}
 \setlength{\hintscolumnwidth}{2cm}
 \AtBeginDocument{\recomputelengths}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
@@ -102,8 +99,11 @@ right  = 3.00cm]{geometry}
 
 \newtoggle{toggleEXPERTISESECTION}
 
+\usepackage{lastpage}
+\rfoot{\textcolor{gray}{\textit{\small{\thepage/\pageref{LastPage}}}}}
+
 \begin{document}
-%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
@@ -132,6 +132,8 @@ right  = 3.00cm]{geometry}
 \GONCVlanSPA
 \GONCVlanENG
 \GONCVlanGER
+
+
 
 \newpage
 % \section{Computer skills}
