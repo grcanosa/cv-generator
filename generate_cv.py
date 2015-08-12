@@ -49,6 +49,7 @@ if __name__ == "__main__":
 			os.environ['TEXINPUTS'] = '.:../moderncv//:'
 			subprocess.call(['pdflatex','-interaction=batchmode','\\input{'+cvlanname+'}'])
 			subprocess.call(['pdflatex','-interaction=batchmode','\\input{'+cvlanname+'}'])
+			#input('Press <ENTER> to continue')
 			shutil.copy(pdfname,'../output/'+pdfname)
 		os.chdir('..')
 		subprocess.call(['rm','-R','temporal'])
